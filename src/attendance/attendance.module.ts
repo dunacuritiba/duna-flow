@@ -8,7 +8,6 @@ import { CustomersModule } from '../customers/customers.module'; // Importa para
 
 @Module({
   imports: [
-    // Registra o model de Atendimento neste módulo
     MongooseModule.forFeature([
       { name: Attendance.name, schema: AttendanceSchema },
     ]),
