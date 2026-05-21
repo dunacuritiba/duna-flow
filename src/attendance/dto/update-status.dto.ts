@@ -1,10 +1,9 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateAttendanceDto } from './create-attendance.dto';
-import { ApiProperty } from '@nestjs/swagger';
+// src/attendance/dto/update-status.dto.ts
 import { IsEnum, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
 import { AttendanceStatus } from '../schema/attendance.schema';
 
-export class UpdateAttendanceDto extends PartialType(CreateAttendanceDto) {
+export class UpdateStatusDto {
   @ApiProperty({ enum: AttendanceStatus, example: AttendanceStatus.NO_SAGUAO })
   @IsEnum(AttendanceStatus)
   @IsNotEmpty()
